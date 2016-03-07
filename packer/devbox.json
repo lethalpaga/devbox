@@ -1,0 +1,47 @@
+{
+    "variables": {
+        "iso_path": "../packer_arch/output/packer_arch.ovf",
+        "ssh_timeout": "20m",
+        "atlas_token": "{{env `ATLAS_TOKEN`}}"
+    },
+    "builders": [
+        {
+            "type": "virtualbox-ovf",
+            "source_path": "{{user `iso_path`}}",
+            "guest_additions_mode": "disable",
+            "http_directory": ".",
+            "boot_wait": "5s",
+            "ssh_username": "vagrant",
+            "ssh_password": "vagrant",
+            "ssh_timeout": "{{user `ssh_timeout`}}",
+            "shutdown_command": "sudo systemctl start poweroff.timer"
+        }
+    ],
+    "provisioners": [
+       {
+         "type": "shell-local",
+         "command": "cd cookbooks && berks vendor"  
+       },
+       {
+         "type": "file",
+         "source": "packer/files/node.json",
+         "destination": "/tmp/chef-solo/node.json"
+       },
+       {
+         "type": "file",
+         "source": "packer/files/solo.rb",
+         "destination": "/tmp/chef-solo/solo.rb"
+       },
+       {
+         "type": "shell",
+         "scripts": ["packer/scripts/x.sh"],
+         "execute_command": "echo \"packer\" | {{ .Vars }} sudo -E -S sh {{ .Path }}"
+       }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "output": "packer_devbox_{{.Provider}}.box"
+        }
+    ]
+}
