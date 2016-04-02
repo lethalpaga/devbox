@@ -1,0 +1,2 @@
+package 'xorg'
+package 'lxdm'

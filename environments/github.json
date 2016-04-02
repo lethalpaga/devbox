@@ -1,0 +1,9 @@
+{
+  "name": "github",
+  "default_attributes": {
+    "devbox": {
+      "user": "lethalpaga",
+      "group": "lethalpaga"
+    }
+  }
+}

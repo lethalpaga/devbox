@@ -1,0 +1,1 @@
+default['awesome']['theme'] = 'lethalpaga'
