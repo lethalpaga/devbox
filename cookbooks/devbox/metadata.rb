@@ -7,3 +7,5 @@ long_description "Installs a base dev box"
 version          "0.0.1"
 
 depends          "rvm"
+depends          "vim_config"
+depends          "golang"

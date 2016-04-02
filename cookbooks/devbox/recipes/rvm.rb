@@ -4,6 +4,7 @@ username = node['devbox']['user']
 groupname = node['devbox']['group']
 
 package 'sqlite'
+package 'libsqlite3-dev'
 
 rvm_ruby 'ruby-2.2.3' do
   user username
