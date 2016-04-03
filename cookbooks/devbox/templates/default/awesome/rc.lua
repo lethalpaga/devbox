@@ -1,9 +1,9 @@
 --
 -- THIS FILE IS MANAGED BY CHEF
--- DO NOT EDIT MANUALLY, IT WILL BE OVERWRITTEN
+--- DO NOT EDIT MANUALLY, IT WILL BE OVERWRITTEN
 --
 
--- Standard awesome library
+---- Standard awesome library
 require("awful")
 require("awful.autofocus")
 require("awful.rules")
@@ -60,8 +60,10 @@ modkey = "Mod4"
 layouts =
 {
     awful.layout.suit.floating,
-    awful.layout.suit.tile.left,
-    awful.layout.suit.tile.top,
+    awful.layout.suit.tile.right,
+    awful.layout.suit.tile.bottom,
+    awful.layout.suit.fair.horizontal,
+    awful.layout.suit.max,
     awful.layout.suit.magnifier
 }
 -- }}}
@@ -71,7 +73,7 @@ layouts =
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "Web", "Code", "Term", "Term2", "Misc1", "Misc2" }, s, layouts[1])
+    tags[s] = awful.tag({ "Web", "Code", "Term", "Misc1", "Misc2" }, s, layouts[2])
 end
 -- }}}
 
@@ -232,9 +234,9 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, ";",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
+    awful.key({ modkey, "Shift"   }, ";",     function () awful.tag.incnmaster(-1)      end),
     awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
+    awful.key({ modkey, "Control" }, ";",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
