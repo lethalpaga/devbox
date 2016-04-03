@@ -18,6 +18,7 @@ directory "#{home_dir}/.config"do
   group groupname
 end
 
+package 'git'
 package 'firefox'
 package 'rxvt-unicode'
 

@@ -1,8 +1,8 @@
 # gnome-terminal
 username, groupname, home_dir = user_vars
 
-repo = 'https://github.com/chriskempson/base16-gnome-terminal'
-destination = "#{home_dir}/dev/base16/gnome-terminal"
+repo = 'https://github.com/chriskempson/base16-xresources'
+destination = "#{home_dir}/dev/base16/xresources"
 
 directory destination do
   user username
@@ -14,11 +14,9 @@ git destination do
   repository repo
 end
 
-execute 'base16-gnome-terminal' do
-  command "#{destination}/base16-default.dark.sh"
-end
-
-execute 'base16-gnome-terminal-set-default-profile' do
-  command "gconftool --set --type 'string' '/apps/gnome-terminal/global/default_profile' -- 'base-16-default-dark'"
-  user username
+remote_file "#{home_dir}/.Xresources" do 
+  source "file://#{destination}/#{node['devbox']['base16']['xresources']}"
+  owner 'root'
+  group 'root'
+  mode 0755
 end
