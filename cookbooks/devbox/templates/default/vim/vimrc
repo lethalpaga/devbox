@@ -1,0 +1,75 @@
+" vim: set foldmethod=marker
+" General stuff {{{1
+execute pathogen#infect()
+filetype indent plugin on
+
+" Create swap files in a separate folder
+" The double // is to preserve the file dirtree
+:set directory=$HOME/.vim/swapfiles//
+
+set shell=sh     " Fish makes plugins sad
+set modeline     " Reads vim file-specific options (e.g. # vim: ...)
+set nocompatible " Because we don't care about vi
+set formatoptions-=r " Don't continue comments on next line
+set formatoptions-=o " Don't continue comments on next line
+set autoindent
+set smartindent
+set hidden
+
+" GUI settings {{{1
+set guifont=Inconsolata\ for\ Powerline\ Medium\ 11
+:tab ball
+
+"  Theme {{{1
+set background=dark
+syntax enable
+let g:solarized_contrast="high"
+colorscheme solarized
+
+" Airline {{{1
+let g:airline_powerline_fonts = 1
+
+" Keyboard shortcuts {{{1
+map <leader><tab> :Sscratch<CR>
+map <leader><S-tab> :Scratch<CR>
+map <C-Tab> :bn<CR>
+map <C-S-Tab> :bN<CR>
+nnoremap gm m " Remap the mark shortcut because easyclip uses m for 'move'
+
+" BufOnly {{{1
+map <leader>c* :BufOnly<CR> " Close all buffers except the current one
+
+" Fugitive {{{1
+map <leader>ge :Gedit<CR>
+map <leader>gd :Gdiff<CR>
+map <leader>gs :Gstatus<CR>
+map <leader>gb :Gblame<CR>
+
+" NERDTRee settings {{{1
+map <C-N> :NERDTreeMirrorToggle<CR>
+map <C-n> :NERDTreeFocus<CR>
+
+" CtrlP {{{1
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" Slime {{{1
+let g:slime_target = "tmux"
+
+" Misc stuff {{{1
+"   Relative numbers {{{2
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+set relativenumber
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
+
+"   Text formatting {{{2
+set tabstop=2
+set shiftwidth=2
+set expandtab
