@@ -1,0 +1,1 @@
+default['go']['scm'] = false
