@@ -10,20 +10,22 @@ Vagrant.configure(2) do |config|
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "hashicorp/precise64"
   #config.vm.synced_folder "../data", "/vagrant_data"
-  
+
   config.vm.hostname = "devbox"
-  
+
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true
     vb.memory = "1024"
     vb.name = "devbox"
   end
-  
-  config.push.define "atlas" do |push|
-    push.app = "lethalpaga/devbox_instance"
-    atlas_token = ENV['ATLAS_TOKEN']
+
+  if ENV['ATLAS_TOKEN']
+    config.push.define "atlas" do |push|
+      push.app = "lethalpaga/devbox_instance"
+      atlas_token = ENV['ATLAS_TOKEN']
+    end
   end
-    
+
   config.vm.provision "chef_solo" do |chef|
     chef.environments_path = 'environments'
     chef.add_recipe "devbox::default"
