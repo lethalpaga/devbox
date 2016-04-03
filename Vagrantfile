@@ -29,10 +29,10 @@ Vagrant.configure(2) do |config|
   config.vm.provision "chef_solo" do |chef|
     chef.environments_path = 'environments'
     chef.add_recipe "devbox::default"
-    
-    chef.environment = 'github'
+
+    chef.environment = ENV['DEVBOX_ENV'] || 'github'
   end
-  
+
   # Copy the ssh, vim and git configuration
   #config.vm.provision 'copy_my_conf' do |copy_conf|
   #  copy_conf.git
