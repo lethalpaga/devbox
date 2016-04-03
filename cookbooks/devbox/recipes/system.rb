@@ -19,4 +19,8 @@ directory "#{home_dir}/.config"do
 end
 
 package 'firefox'
-package 'gnome-terminal'
+package 'rxvt-unicode'
+
+execute 'default-urxvt' do
+  command 'update-alternatives --set x-terminal-emulator /usr/bin/urxvt'
+end

@@ -10,3 +10,4 @@ directory node['vim_config']['bundle_dir'] do
 end
 
 vim_config_git 'https://github.com/scrooloose/nerdtree.git'
+vim_config_git 'https://github.com/chriskempson/base16-vim.git'
