@@ -1,6 +1,7 @@
 /output-*
-/packer_cache/* 
+/packer_cache/*
 /.vagrant/
+/environments/work.json
 *.box
 .kitchen/
 .kitchen.local.yml
