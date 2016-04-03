@@ -2,3 +2,5 @@
 /packer_cache/* 
 /.vagrant/
 *.box
+.kitchen/
+.kitchen.local.yml
