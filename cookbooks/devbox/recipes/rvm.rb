@@ -1,7 +1,6 @@
 include_recipe 'rvm::user_install'
 
-username = node['devbox']['user']
-groupname = node['devbox']['group']
+username, groupname, home_dir = user_vars
 
 package 'sqlite'
 package 'libsqlite3-dev'

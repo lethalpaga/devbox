@@ -1,8 +1,6 @@
 package 'fish'
 
-username = node['devbox']['user']
-groupname = node['devbox']['group']
-home_dir = "/home/#{username}"
+username, groupname, home_dir = user_vars
 
 group groupname
 
@@ -21,6 +19,7 @@ end
 package 'git'
 package 'firefox'
 package 'rxvt-unicode'
+package 'tmux'
 
 execute 'default-urxvt' do
   command 'update-alternatives --set x-terminal-emulator /usr/bin/urxvt'

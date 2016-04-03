@@ -1,7 +1,7 @@
 package 'awesome'
 
-username = node['devbox']['user']
-groupname = node['devbox']['group']
+username, groupname, home_dir = user_vars
+
 config_path = "/home/#{username}/.config/awesome"
 
 directory config_path do
