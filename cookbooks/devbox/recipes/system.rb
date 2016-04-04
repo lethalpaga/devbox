@@ -22,6 +22,7 @@ package 'git'
 package 'firefox'
 package 'rxvt-unicode'
 package 'tmux'
+package 'fonts-inconsolata'
 
 execute 'default-urxvt' do
   command 'update-alternatives --set x-terminal-emulator /usr/bin/urxvt'
