@@ -1,3 +1,5 @@
+include_recipe 'apt'
+
 package 'fish'
 
 username, groupname, home_dir = user_vars
@@ -23,4 +25,10 @@ package 'tmux'
 
 execute 'default-urxvt' do
   command 'update-alternatives --set x-terminal-emulator /usr/bin/urxvt'
+end
+
+# Add the user to sudoers
+sudo username do
+  user      "#{username}"
+  commands  ['ALL']
 end

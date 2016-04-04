@@ -59,3 +59,9 @@ template "#{home_dir}/.vim/vimrc" do
   user username
   group groupname
 end
+
+link "#{home_dir}/.vimrc" do
+  to "#{home_dir}/.vim/vimrc"
+  user username
+  group groupname
+end
