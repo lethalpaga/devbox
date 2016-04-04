@@ -24,6 +24,10 @@ package 'rxvt-unicode'
 package 'tmux'
 package 'fonts-inconsolata'
 
+# Required for rvm
+package 'gawk'
+package 'libgmp-dev'
+
 execute 'default-urxvt' do
   command 'update-alternatives --set x-terminal-emulator /usr/bin/urxvt'
 end

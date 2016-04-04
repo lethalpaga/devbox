@@ -6,5 +6,6 @@ include_recipe 'devbox::base16'
 
 # Application configuration
 include_recipe 'devbox::rvm'
+include_recipe 'devbox::ruby_gems'
 include_recipe 'devbox::vim'
 include_recipe 'devbox::golang'

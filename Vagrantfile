@@ -1,6 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Needed plugins:
+# - vagrant-berkshelf
+# - copy_my_conf
+
 Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at

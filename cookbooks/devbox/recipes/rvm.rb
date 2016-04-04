@@ -1,17 +1,9 @@
-include_recipe 'rvm::user_install'
-
 username, groupname, home_dir = user_vars
 
 package 'sqlite'
 package 'libsqlite3-dev'
 
-rvm_ruby 'ruby-2.2.3' do
-  user username
-end
-
-rvm_default_ruby 'ruby-2.2.3' do
-  user username
-end
+include_recipe 'rvm::user'
 
 # Install rvm module for fish
 fish_dir = "/home/#{node['devbox']['user']}/.config/fish/"
