@@ -1,6 +1,9 @@
 include_recipe 'apt'
 
 package 'fish'
+package 'virtualbox-guest-dkms'
+package 'virtualbox-guest-utils'
+package 'virtualbox-guest-x11'
 
 username, groupname, home_dir = user_vars
 
