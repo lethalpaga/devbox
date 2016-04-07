@@ -1,0 +1,15 @@
+[alias]
+  st = status
+  ci = commit -v
+  co = checkout
+  commit = commit -v
+  diff = icdiff
+  d = icdiff
+  br = branch -vv 
+[push]
+  default = simple
+[core]
+  autocrlf = false
+[credential]
+  helper = store
+
