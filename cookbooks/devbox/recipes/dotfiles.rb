@@ -10,4 +10,6 @@ template "#{home_dir}/.gitconfig" do
   source "git/gitconfig"
   user username
   group groupname
+
+  action :create_if_missing
 end
