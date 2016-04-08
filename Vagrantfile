@@ -21,6 +21,7 @@ Vagrant.configure(2) do |config|
     vb.gui = true
     vb.memory = "1024"
     vb.name = "devbox"
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
   end
 
   if ENV['ATLAS_TOKEN']
