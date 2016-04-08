@@ -25,7 +25,7 @@ directory File.dirname(theme_path) do
   group groupname
   recursive true
 end
- 
+
 template theme_path do
   source 'awesome/theme.lua'
   user username

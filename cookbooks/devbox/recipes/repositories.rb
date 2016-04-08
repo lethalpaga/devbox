@@ -13,6 +13,5 @@ apt_repository 'awesome' do
   distribution distrib
 end
 
-
 # Update the cache
 include_recipe 'apt'
