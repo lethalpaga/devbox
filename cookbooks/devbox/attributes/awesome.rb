@@ -1,1 +1,1 @@
-default['awesome']['theme'] = 'lethalpaga'
+default['awesome']['theme'] = 'devbox'
