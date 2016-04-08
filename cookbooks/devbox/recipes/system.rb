@@ -18,6 +18,11 @@ directory "#{home_dir}/.config"do
   group groupname
 end
 
+directory "#{home_dir}/dev" do
+  user username
+  group groupname
+end
+
 package 'git'
 package 'firefox'
 package 'rxvt-unicode'
@@ -34,6 +39,6 @@ end
 
 # Add the user to sudoers
 sudo username do
-  user      "#{username}"
-  commands  ['ALL']
+  user username
+  commands ['ALL']
 end
