@@ -1,3 +1,3 @@
 default['devbox']['user'] = 'devbox'
 default['devbox']['group'] = 'devbox'
-default['devbox']['distrib'] = 'xenial'
+default['devbox']['distrib'] = 'wily'
