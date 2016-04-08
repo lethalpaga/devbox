@@ -6,6 +6,7 @@ include_recipe 'devbox::awesome'
 include_recipe 'devbox::base16'
 
 # Application configuration
+include_recipe 'devbox::firefox'
 include_recipe 'devbox::fish'
 include_recipe 'devbox::rvm'
 include_recipe 'devbox::ruby_gems'

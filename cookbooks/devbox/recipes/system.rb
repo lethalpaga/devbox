@@ -24,7 +24,6 @@ directory "#{home_dir}/dev" do
 end
 
 package 'git'
-package 'firefox'
 package 'rxvt-unicode'
 package 'tmux'
 package 'fonts-inconsolata'
