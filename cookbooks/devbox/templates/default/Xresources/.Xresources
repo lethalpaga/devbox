@@ -1,0 +1,2 @@
+#include ".Xresources.d/color_theme"
+#include ".Xresources.d/rxvt"
