@@ -1,5 +1,3 @@
-include_recipe 'apt'
-
 package 'virtualbox-guest-dkms'
 package 'virtualbox-guest-utils'
 package 'virtualbox-guest-x11'
