@@ -4,7 +4,7 @@ package 'fish'
 
 fish_dir = "/#{home_dir}/.config/fish/"
 
-directory "#{fish_dir}" do
+directory fish_dir do
   user username
   group groupname
 end
