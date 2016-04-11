@@ -25,6 +25,9 @@ set autoindent
 set smartindent
 set hidden
 
+" Disable the visual mode
+noremap Q <NOP>
+
 " GUI settings {{{1
 set guifont=<%= node['devbox']['vim']['guifont'] %>
 :tab ball
