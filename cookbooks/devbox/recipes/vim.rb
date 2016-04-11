@@ -41,6 +41,7 @@ vim_config_git 'https://github.com/jpalardy/vim-slime.git'
 vim_config_git 'https://github.com/tpope/vim-surround.git'
 vim_config_git 'https://github.com/tpope/vim-endwise.git'
 vim_config_git 'https://github.com/tpope/vim-dispatch'
+vim_config_git 'https://github.com/mileszs/ack.vim'
 
 # Finish pathogen installation
 link "#{home_dir}/.vim/autoload/pathogen.vim" do

@@ -27,6 +27,7 @@ package 'git'
 package 'rxvt-unicode'
 package 'tmux'
 package 'fonts-inconsolata'
+package 'ack-grep'
 
 # Required for rvm
 package 'gawk'
