@@ -1,4 +1,5 @@
 package 'vim-gtk'
+package 'exuberant-ctags'
 
 username, groupname, home_dir = user_vars
 
@@ -42,6 +43,7 @@ vim_config_git 'https://github.com/tpope/vim-surround.git'
 vim_config_git 'https://github.com/tpope/vim-endwise.git'
 vim_config_git 'https://github.com/tpope/vim-dispatch'
 vim_config_git 'https://github.com/mileszs/ack.vim'
+vim_config_git 'https://github.com/bronson/vim-trailing-whitespace.git'
 
 # Finish pathogen installation
 link "#{home_dir}/.vim/autoload/pathogen.vim" do
