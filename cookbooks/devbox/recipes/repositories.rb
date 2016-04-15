@@ -13,5 +13,13 @@ apt_repository 'awesome' do
   distribution distrib
 end
 
+apt_repository 'docker' do
+  uri 'https://apt.dockerproject.org/repo'
+  components ['main']
+  distribution 'ubuntu-wily' # Because we can't all respect the standards...
+  keyserver 'hkp://p80.pool.sks-keyservers.net:80'
+  key '58118E89F3A912897C070ADBF76221572C52609D'
+end
+
 # Update the cache
 include_recipe 'apt'
