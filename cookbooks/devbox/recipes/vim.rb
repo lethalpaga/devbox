@@ -44,6 +44,8 @@ vim_config_git 'https://github.com/tpope/vim-endwise.git'
 vim_config_git 'https://github.com/tpope/vim-dispatch'
 vim_config_git 'https://github.com/mileszs/ack.vim'
 vim_config_git 'https://github.com/bronson/vim-trailing-whitespace.git'
+vim_config_git 'https://github.com/kylef/apiblueprint.vim.git'
+vim_config_git 'https://github.com/scrooloose/syntastic'
 
 # Finish pathogen installation
 link "#{home_dir}/.vim/autoload/pathogen.vim" do
