@@ -30,6 +30,7 @@ package 'tmux'
 package 'fonts-inconsolata'
 package 'ack-grep'
 package 'awscli'
+package 'htop'
 
 # Required for rvm
 package 'gawk'
