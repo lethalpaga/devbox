@@ -31,6 +31,7 @@ package 'fonts-inconsolata'
 package 'ack-grep'
 package 'awscli'
 package 'htop'
+package 'lynx'
 
 # Required for rvm
 package 'gawk'
