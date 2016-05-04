@@ -24,12 +24,9 @@ directory "#{home_dir}/dev" do
 end
 
 package 'git'
-package 'git-gui'
 package 'rxvt-unicode'
 package 'tmux'
 package 'fonts-inconsolata'
-package 'ack-grep'
-package 'awscli'
 package 'htop'
 package 'lynx'
 
