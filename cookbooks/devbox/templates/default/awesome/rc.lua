@@ -85,7 +85,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "Web", "Code", "Term", "Misc1", "Misc2" }, s, layouts[2])
+    tags[s] = awful.tag({ "Web", "Code", "Term", "Misc1", "Misc2", "Misc3" }, s, layouts[2])
 end
 -- }}}
 
@@ -290,10 +290,23 @@ clientkeys = awful.util.table.join(
             -- minimized, since minimized clients can't have the focus.
             c.minimized = true
         end),
+    -- Maximize/Demaximize in all direction
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
+        end)
+
+    -- Maximize vertically
+    awful.key({ modkey, "Shift" }, "m",
+        function (c)
+            c.maximized_vertical   = not c.maximized_vertical
+        end)
+
+    -- Maximize horizontally
+    awful.key({ modkey, "Control" }, "m",
+        function (c)
+          c.maximized_horizontal = not c.maximized_horizontal
         end)
 )
 
