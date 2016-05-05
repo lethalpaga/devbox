@@ -5,3 +5,5 @@
 *.box
 .kitchen/
 .kitchen.local.yml
+/_build/
+Berksfile.lock
