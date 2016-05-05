@@ -6,7 +6,7 @@ include_recipe 'devbox::awesome'
 include_recipe 'devbox::base16'
 
 # Dev tools
-include_recipe 'devbox::dev_tools.rb'
+include_recipe 'devbox::dev_tools'
 
 # Application configuration
 include_recipe 'devbox::firefox'
