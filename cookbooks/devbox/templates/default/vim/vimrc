@@ -24,7 +24,10 @@ set formatoptions-=o " Don't continue comments on next line
 set autoindent
 set smartindent
 set hidden
-set cursorline
+
+if has("gui_running")
+  set cursorline
+endif
 
 " Disable the visual mode
 noremap Q <NOP>
