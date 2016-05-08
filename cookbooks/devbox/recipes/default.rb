@@ -18,6 +18,7 @@ include_recipe 'devbox::rvm'
 include_recipe 'devbox::ruby_gems'
 include_recipe 'devbox::vim'
 include_recipe 'devbox::golang'
+include_recipe 'devbox::keepass'
 
 # Install dotfiles after everything has been configured
 include_recipe 'devbox::dotfiles'

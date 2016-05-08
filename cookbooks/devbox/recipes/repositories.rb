@@ -21,5 +21,11 @@ apt_repository 'docker' do
   key '58118E89F3A912897C070ADBF76221572C52609D'
 end
 
+apt_repository 'keepassx' do
+  uri 'ppa:keepassx/daily'
+  components ['main']
+  distribution distrib
+end
+
 # Update the cache
 include_recipe 'apt'

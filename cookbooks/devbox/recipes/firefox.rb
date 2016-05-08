@@ -14,3 +14,8 @@ firefox_extension 'tabtree' do
   url 'https://addons.mozilla.org/firefox/downloads/latest/637996/platform:2/addon-637996-latest.xpi'
   id '{ec8030f7-c20a-464f-9b0e-13a3a9e97384}'
 end
+
+firefox_extension 'PassIFox' do
+  url 'https://addons.mozilla.org/firefox/downloads/latest/292320/addon-292320-latest.xpi'
+  id '{ec8030f7-c20a-464f-9b0e-13a3a9e97384}'
+end
