@@ -24,6 +24,7 @@ set formatoptions-=o " Don't continue comments on next line
 set autoindent
 set smartindent
 set hidden
+set paste
 
 if has("gui_running")
   set cursorline
