@@ -36,3 +36,15 @@ template "#{fish_dir}/config.fish" do
   user username
   group groupname
 end
+
+config_dir = "#{fish_dir}/config.d" 
+directory config_dir do
+  user username
+  group groupname
+end
+
+template "#{config_dir}/rvm.fish" do
+  source 'fish/config.d/rvm.fish'
+  user username
+  group groupname
+end
