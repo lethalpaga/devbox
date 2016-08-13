@@ -1,0 +1,1 @@
+default['spacemacs']['font']['url'] = 'https://github.com/adobe-fonts/source-code-pro/archive/2.030R-ro/1.050R-it.zip'

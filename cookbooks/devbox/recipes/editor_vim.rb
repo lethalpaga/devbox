@@ -9,7 +9,7 @@ directory "#{home_dir}/.vim" do
   group groupname
 end
 
-directory "#{home_dir}/.vim/autoload" do
+directory "#{home_dir}/.vim/autoload" do  
   user username
   group groupname
 end
@@ -48,6 +48,7 @@ vim_config_git 'https://github.com/kylef/apiblueprint.vim.git'
 vim_config_git 'https://github.com/scrooloose/syntastic'
 vim_config_git 'https://github.com/terryma/vim-smooth-scroll.git'
 vim_config_git 'https://github.com/dag/vim-fish'
+vim_config_git 'https://github.com/rust-lang/rust.vim.git'
 
 # Finish pathogen installation
 link "#{home_dir}/.vim/autoload/pathogen.vim" do

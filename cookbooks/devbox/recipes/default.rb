@@ -16,7 +16,7 @@ include_recipe 'devbox::docker'
 include_recipe 'devbox::nvm'
 include_recipe 'devbox::rvm'
 include_recipe 'devbox::ruby_gems'
-include_recipe 'devbox::vim'
+include_recipe 'devbox::editor'
 include_recipe 'devbox::golang'
 include_recipe 'devbox::keepass'
 

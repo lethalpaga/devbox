@@ -13,3 +13,4 @@ depends          "patch"
 depends          "sudo"
 depends          "apt"
 depends          "nvm"
+depends          "zipfile", '~> 0.1.0'
