@@ -29,7 +29,7 @@ end
 
 # Additional Xresources
 remote_file "#{xresources_dir}/color_theme" do
-  source "file://#{destination}/#{node['devbox']['base16']['xresources']}"
+  source "file://#{destination}/xresources/#{node['devbox']['base16']['xresources']}"
   owner username
   group groupname
   mode 0755
