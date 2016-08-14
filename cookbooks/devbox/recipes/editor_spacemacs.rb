@@ -7,10 +7,14 @@ package 'emacs'
 
 git "#{home_dir}/.emacs.d" do
   repository 'https://github.com/syl20bnr/spacemacs'
+  user username
+  group groupname
 end
 
 template "#{home_dir}/.spacemacs" do
   source 'spacemacs/.spacemacs.erb'
+  user username
+  group groupname
 end
 
 # Install the fonts
