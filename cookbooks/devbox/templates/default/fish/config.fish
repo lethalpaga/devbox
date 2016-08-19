@@ -1,5 +1,6 @@
 #!fish
 fundle plugin 'edc/bass'
+fundle plugin 'lethalpaga/deadlygoldfish-theme'
 fundle init
 
 # Load all scripts in config.d
