@@ -3,8 +3,11 @@ fundle plugin 'edc/bass'
 fundle plugin 'lethalpaga/deadlygoldfish-theme'
 fundle init
 
+# Setup PATH
+set -g -x PATH $PATH ~/.local/bin ~/bin
+
 # Load all scripts in config.d
-if [ -z $FISH_CONFIG_DIR ] 
+if [ -z $FISH_CONFIG_DIR ]
   set FISH_CONFIG_DIR (dirname (status -f))/config.d
 end
 
