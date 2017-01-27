@@ -1,6 +1,7 @@
 #!fish
 fundle plugin 'edc/bass'
 fundle plugin 'lethalpaga/deadlygoldfish-theme'
+fundle plugin 'oh-my-fish/plugin-aws'
 fundle init
 
 # Setup PATH
