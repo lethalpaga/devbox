@@ -68,7 +68,8 @@ local layouts =
     awful.layout.suit.tile.bottom,
     awful.layout.suit.fair.horizontal,
     awful.layout.suit.max,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.spiral.dwindle
 }
 -- }}}
 
