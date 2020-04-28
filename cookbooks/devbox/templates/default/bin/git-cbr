@@ -1,0 +1,4 @@
+#!/bin/bash
+
+## Cleanup merged git branches
+exec git branch --merged | grep -v 'master' | xargs git br -d
